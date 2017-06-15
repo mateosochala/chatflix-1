@@ -51,7 +51,7 @@ class User:
         clean_message = message.lower().strip()
 
         # Il faut traiter ici le message
-        return
+        return "waza"
 
     # Donne la norme de l'utilisateur
     def get_norm(self):
