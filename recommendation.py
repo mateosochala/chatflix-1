@@ -74,7 +74,8 @@ class Recommendation:
 
     # Pose une question à l'utilisateur
     def ask_question(self, user):
-        return "Vous aimez les films ?"
+        film = get_rnd_movie()
+        return "Vous aimez" + film +" ?"
 
     # Calcule la similarité entre 2 utilisateurs
     @staticmethod
@@ -84,3 +85,12 @@ class Recommendation:
     # Calcule la similarité entre un utilisateur et tous les utilisateurs de tests
     def compute_all_similarities(self, user):
         return []
+
+    # Donne un film aléatoirement
+    def get_rnd_movie():
+        a = randint(2)
+        if a == 0 :
+            return "Harry Potter"
+        else :
+            return "Le Seigneur des Anneaux"
+        
